@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<ParsingData>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="row">
+        <div class="col-1">
+
+            <input type="submit" asp-action="Pars" asp-controller="Home" class="btn btn-outline-primary" value="Start" />
+        </div>
+
+        <div class="col">
+            @foreach (var item in Model)
+            {
+                <p><img src="@item.Image"></p>
+                <p>tovar: @item.Name</p>
+                <p>company: @item.CompanyName @item.RatingCompany</p>
+                <p>price: @item.Price</p>
+                <p>location: @item.Location</p>
+                <p>comment: @item.Comment</p>
+                <a href="@item.UrlToCompany">Перейти к поставщику</a>
+                
+            }
+        </div>
+    </div>
+</div>
+
