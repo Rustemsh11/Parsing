@@ -2,8 +2,9 @@
 using AngleSharp.Html.Parser;
 using System.Collections.Generic;
 using AngleSharp.Html.Dom;
+using Parsing.Models;
 
-namespace Parsing.Models
+namespace Parsing.Helper
 {
     public class StroyPriceParsing
     {
